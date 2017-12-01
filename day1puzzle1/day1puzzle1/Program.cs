@@ -19,8 +19,7 @@ namespace day1puzzle1
         }
         public int Prg1(string text)
         {
-            string textOut = "";
-            int count = 0, current = 0, next = text.Length;
+            int count = 0, current, next;
 
             for (int i = 0; i < text.Length; i++)
             {
@@ -45,8 +44,7 @@ namespace day1puzzle1
 
         public int Prg2(string text)
         {
-            string textOut = "";
-            int count = 0, current = 0, next = text.Length;
+            int count = 0, current, next;
 
             for (int i = 0; i < text.Length; i++)
             {
