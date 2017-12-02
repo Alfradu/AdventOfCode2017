@@ -1,0 +1,6 @@
+X:\Sysvet\adventOfCode\day2puzzle\day2puzzle\bin\Debug\day2puzzle.exe.config
+X:\Sysvet\adventOfCode\day2puzzle\day2puzzle\bin\Debug\day2puzzle.exe
+X:\Sysvet\adventOfCode\day2puzzle\day2puzzle\bin\Debug\day2puzzle.pdb
+X:\Sysvet\adventOfCode\day2puzzle\day2puzzle\obj\Debug\day2puzzle.csprojResolveAssemblyReference.cache
+X:\Sysvet\adventOfCode\day2puzzle\day2puzzle\obj\Debug\day2puzzle.exe
+X:\Sysvet\adventOfCode\day2puzzle\day2puzzle\obj\Debug\day2puzzle.pdb
