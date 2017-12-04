@@ -10,7 +10,7 @@ namespace day3puzzle
     {
         static void Main(string[] args)
         {
-            //368078 WIP
+            //368078 
             int input = int.Parse(Console.ReadLine());
             double inputd = Math.Sqrt((double)input);
             int floor = (int)inputd+1;
@@ -66,13 +66,16 @@ namespace day3puzzle
             int y=49;
             int a = 0;
             int b = 0;
-            int[] currentPos = { x, y };
-            int[] previousPos = {x,y};
+            int[] currentPos = { x , y };
+            int[] previousPos = { x , y };
             int[,] n = new int[100, 100];
+            n[x, y] = 1;
             while (n[x,y] < input)
             {
                 //get next n and fill it out with a+b
-
+                a = n[x, y];
+                //try go left? if not change direction
+                if (n[x,y] < 1)
             }
         }
     }
