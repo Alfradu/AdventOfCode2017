@@ -68,37 +68,47 @@ namespace day3puzzle
 
         private static int Pgm2(int input)
         {
+            int[,] n = new int[100, 100];
             int x=49;
             int y=49;
-            int a = 0; // == previous node value
-            int b = 0; // == sum of all n-values in proximity
+            n[x, y] = 1;
+
+            int[] previousPos = { x, y };
             string dirString = "right";
             int[] direction = { 1, 0 }; //1,0 = right (initial). -1,0 = left. 0,1 = down. 0,-1 = up
-            int[] previousPos = {x,y};
-            int[,] n = new int[100, 100];
+            
+            x += direction[0];
+            y += direction[1];
+
             n[x, y] = 1;
-            x = x + direction[0];
-            y = x + direction[1];
+            previousPos = new int[] { x, y };
+
+            dirString = "up";
+            direction = new int[] { 0, -1 };
+
+            int a = 0; // == previous node value
+            int b = 0; // == sum of all n-values in proximity
             do
             {
                 //get next n and fill it out with a+b
                 x += direction[0];
                 y += direction[1];
                 a = n[previousPos[0], previousPos[1]];
-                b = n[x-1, y-1] + n[x+0, y-1] + n[x+1, y-1] + n[x+1, y+0] + n[x+1, y+1] + n[x+0, y+1] + n[x-1, y+1] + n[x-1, y+0] - n[previousPos[0], previousPos[1]];
+                
+                b = n[x-1, y-1] + n[x, y-1] + n[x+1, y-1] + n[x+1, y] + n[x+1, y+1] + n[x, y+1] + n[x-1, y+1] + n[x-1, y] - n[previousPos[0], previousPos[1]];
+
                 //Any connecting nodes? if not, go back and change direction
-                if (b > -1)
+                if (b > 0)
                 {
                     //Update pos, previous pos, add new number
                     n[x, y] = a + b;
-                    Console.WriteLine("Setting next pos.");
+                    previousPos = new int[] { x, y };
                 }
                 else
                 {
-                    Console.WriteLine("Going back.");
+                    x = previousPos[0];
+                    y = previousPos[1];
                     //chose another direction and go back one square
-                    x -= direction[0];
-                    y -= direction[1];
                     switch (dirString)
                     {
                         case "right":
@@ -122,7 +132,6 @@ namespace day3puzzle
                             direction[1] = 0;
                             break;
                     }
-
                 }
             } while (n[x, y] < input);
             return n[x, y];
