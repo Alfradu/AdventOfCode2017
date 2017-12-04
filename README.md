@@ -1,5 +1,5 @@
 ﻿# AdventOfCode2017
-My attempts at solving the AoC2017 puzzles. 
+My C# attempts at solving the AoC2017 puzzles. 
 
 * [Day 1: Inverse Captcha](day1puzzle1/day1puzzle1/Program.cs)
 * [Day 2: Corruption Checksum](day2puzzle/day2puzzle/Program.cs)
