@@ -7,6 +7,8 @@ My C# attempts at solving the AoC2017 puzzles.
 * [Day 3: Spiral Memory](day3puzzle/day3puzzle/Program.cs)
 * [Day 4: High-Entropy Passphrases](day4puzzle/day4puzzle/Program.cs)
 * [Day 5: A Maze of Twisty Trampolines, All Alike](day5puzzle/day5puzzle/Program.cs)
+* [Day 6: Memory Reallocation](day6puzzle/day6puzzle/Program.cs)
+
 
            _/^\_      
           <     >
